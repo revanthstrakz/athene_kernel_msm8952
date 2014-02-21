@@ -310,6 +310,14 @@ config SUSPEND_DEBUG
 	  before suspend. It doesn't work only if you have read the system
 	  file node /sys/privae/tlmm_before_sleep and vreg_before_sleep
 
+config QUICK_WAKEUP
+	bool "Quick wakeup"
+	depends on SUSPEND
+	default y
+	---help---
+	  Allow kernel driver to do periodic jobs without resuming the full system
+	  This option can increase battery life on android powered smartphone
+
 config	BOEFFLA_WL_BLOCKER
 	bool "Boeffla generic wakelock blocker driver"
 	depends on PM
