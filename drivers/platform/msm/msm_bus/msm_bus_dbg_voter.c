@@ -149,6 +149,7 @@ static ssize_t bus_floor_vote_store_api(struct device *dev,
 		rt_mutex_unlock(&msm_bus_floor_vote_lock);
 		return -EINVAL;
 	}
+	name[9] = '\0';
 
 	pr_info("%s: name %s vote %llu\n",
 			__func__, name, vote_khz);
