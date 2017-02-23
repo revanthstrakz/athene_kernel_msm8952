@@ -1083,7 +1083,7 @@ void msm_gpio_show_resume_irq(void)
 			else if (desc->action && desc->action->name)
 				name = desc->action->name;
 
-			pr_warn("%s: %d(gpio=%ld) triggered %s\n",
+			pr_debug("%s: %d(gpio=%ld) triggered %s\n",
 					__func__, irq, i, name);
 		}
 	}
