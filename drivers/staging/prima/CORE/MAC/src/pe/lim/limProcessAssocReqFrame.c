@@ -1680,7 +1680,7 @@ void limSendMlmAssocInd(tpAniSirGlobal pMac, tpDphHashNode pStaDs, tpPESession p
             }
         } else {
             if (psessionEntry->vhtCapability && pAssocReq->VHTCaps.present) {
-		if ((psessionEntry->vhtTxChannelWidthSet ==
+                if ((psessionEntry->vhtTxChannelWidthSet ==
                                                 eHT_CHANNEL_WIDTH_80MHZ) &&
                                  pAssocReq->HTCaps.supportedChannelWidthSet) {
                     pMlmAssocInd->chan_info.info = MODE_11AC_VHT80;
@@ -1690,7 +1690,7 @@ void limSendMlmAssocInd(tpAniSirGlobal pMac, tpDphHashNode pStaDs, tpPESession p
                     pMlmAssocInd->chan_info.info = MODE_11AC_VHT40;
                 } else
                     pMlmAssocInd->chan_info.info = MODE_11AC_VHT20;
-		pMlmAssocInd->VHTCaps = pAssocReq->VHTCaps;
+                    pMlmAssocInd->VHTCaps = pAssocReq->VHTCaps;
             } else if (psessionEntry->htCapability &&
                                 pAssocReq->HTCaps.present) {
                 if ((psessionEntry->vhtTxChannelWidthSet ==
