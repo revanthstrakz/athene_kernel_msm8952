@@ -8,8 +8,8 @@
  *
  * Maple uses a first come first serve style algorithm with seperated read/write
  * handling to allow for read biases. By prioritizing reads, simple tasks should improve
- * in performance. Maple also uses hooks for the powersuspend driver to increase
- * expirations when power is suspended to decrease workload.
+ * in performance. Maple also uses hooks for the display state api to increase
+ * expirations when display is off to decrease workload.
  */
 #include <linux/blkdev.h>
 #include <linux/elevator.h>
