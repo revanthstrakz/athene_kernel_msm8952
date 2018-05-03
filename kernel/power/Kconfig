@@ -311,6 +311,6 @@ config SUSPEND_DEBUG
 	  file node /sys/privae/tlmm_before_sleep and vreg_before_sleep
 
 config	BOEFFLA_WL_BLOCKER
-		bool "Boeffla generic wakelock blocker driver"
-		depends on PM
-		default N
+	bool "Boeffla generic wakelock blocker driver"
+	depends on PM
+	default y
