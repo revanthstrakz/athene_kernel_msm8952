@@ -1760,13 +1760,13 @@ VOS_STATUS vos_nv_readMacAddress( v_MAC_ADDRESS_t pMacAddress )
 #ifdef MOTO_UTAGS_MAC
 static inline void strtomac(char * buf, unsigned char macaddr[6]) {
     if (strchr(buf, ':'))
-        sscanf(buf, "%hhx:%hhx:%hhx:%hhx:%hhx:%hhx",
+	sscanf(buf, "%hhx:%hhx:%hhx:%hhx:%hhx:%hhx",
             &macaddr[0],&macaddr[1], &macaddr[2], &macaddr[3], &macaddr[4], &macaddr[5]);
     else if (strchr(buf, '-'))
-        sscanf(buf, "%hhx-%hhx-%hhx-%hhx-%hhx-%hhx",
+	sscanf(buf, "%hhx-%hhx-%hhx-%hhx-%hhx-%hhx",
             &macaddr[0],&macaddr[1], &macaddr[2], &macaddr[3], &macaddr[4], &macaddr[5]);
     else
-        VOS_TRACE( VOS_MODULE_ID_VOSS, VOS_TRACE_LEVEL_ERROR,
+	VOS_TRACE( VOS_MODULE_ID_VOSS, VOS_TRACE_LEVEL_ERROR,
             "%s,Can not parse mac address: %s", __func__,buf);
 }
 #endif
