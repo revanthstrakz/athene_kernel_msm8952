@@ -532,11 +532,11 @@ void msm_isp_update_framedrop_reg(struct vfe_device *vfe_dev,
 			vfe_dev->axi_data.src_info[frame_src].frame_id > 0) {
 		if(stream_info->runtime_init_frame_drop)
 			stream_info->runtime_init_frame_drop--;
-			if (stream_info->runtime_init_frame_drop == 0) {
-				stream_info->runtime_framedrop_update = 0;
-				msm_isp_cfg_framedrop_reg(vfe_dev, stream_info);
-			}
+		if (stream_info->runtime_init_frame_drop == 0) {
+			stream_info->runtime_framedrop_update = 0;
+			msm_isp_cfg_framedrop_reg(vfe_dev, stream_info);
 		}
+	}
 		if (stream_info->stream_type != BURST_STREAM)
 			continue;
 
