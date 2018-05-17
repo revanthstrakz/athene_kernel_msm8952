@@ -381,6 +381,7 @@ KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
 		   -Wno-format-security \
 		   -Wno-discarded-array-qualifiers \
 		   -Wno-unused-const-variable \
+		   -mtune=cortex-a53 \
 		   -fno-delete-null-pointer-checks \
 		   -std=gnu89
 
